@@ -1,0 +1,70 @@
+-- obfuscated by security
+-- obfuscated by security
+-- obfuscated by security
+-- obfuscated by security
+-- obfuscated by security WHY YOU ARE HERE
+function eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi(code)res=''for i in ipairs(code)do res=res..string.char(code[i]/105)end return res end 
+
+
+local Players, RunService = game:GetService(eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8400,11340,10185,12705,10605,11970,12075})), game:GetService(eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8610,12285,11550,8715,10605,11970,12390,11025,10395,10605}))
+local LocalPlayer = Players.LocalPlayer
+local StarterGui = game:GetService(eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8715,12180,10185,11970,12180,10605,11970,7455,12285,11025}))
+
+StarterGui:SetCore(eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8715,10605,11550,10500,8190,11655,12180,11025,10710,11025,10395,10185,12180,11025,11655,11550}),{
+	Title = eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8190,10605,12180,12495,11655,11970,11235,3360,6930,12705,11760,10185,12075,12075}),
+	Text = eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8610,10605,11445,10185,11235,10605,3360,8085,10185,10500,10605,3360,10290,12705,3360,7560,11025,12705,10185,11340,11340,5355,5670,5040}),
+	Icon = eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({11970,10290,12600,10185,12075,12075,10605,12180,11025,10500,6090,4935,4935,5145,5250,5565,5670,5250,5040,5565,5355,5565,5985,5670})
+})
+
+if not getgenv().Network then
+	getgenv().Network = {
+		BaseParts = {};
+		Velocity = Vector3.new(0,999999,0);
+		Output = {
+			Enabled = true;
+			Prefix = eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({9555,8190,7245,8820,9135,8295,8610,7875,9765,3360});
+			Send = function(Type,Output,BypassOutput)
+				if typeof(Type) == eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({10710,12285,11550,10395,12180,11025,11655,11550}) and (Type == print or Type == warn or Type == error) and typeof(Output) == eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({12075,12180,11970,11025,11550,10815}) then
+					if Network.Output.Enabled or BypassOutput then
+						Type(Network.Output.Prefix..Output)
+					end
+				end
+			end;
+		};
+	}
+	Network.Output.Send(print,eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8190,10605,12180,12495,11655,11970,11235,3360,7980,11655,10185,10500,10605,10500,4830}))
+end
+
+local char = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+
+for _,h in pairs(char:GetChildren()) do
+	if h:IsA(eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({6825,10395,10395,10605,12075,12075,11655,11970,12705})) then
+		local hd = h.Handle
+		if hd:FindFirstChild(eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({6825,10395,10395,10605,12075,12075,11655,11970,12705,9135,10605,11340,10500})) then
+			hd.AccessoryWeld:Destroy()
+		end
+		table.insert(Network.BaseParts, hd)
+	end
+end
+
+Network.PartOwnership = {Enabled = false}
+Network.PartOwnership.Enable = coroutine.create(function()
+	if not Network.PartOwnership.Enabled then
+		Network.PartOwnership.Enabled = true
+		Network.PartOwnership.Connection = RunService.Heartbeat:Connect(function()
+			sethiddenproperty(LocalPlayer,eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8715,11025,11445,12285,11340,10185,12180,11025,11655,11550,8610,10185,10500,11025,12285,12075}),1/0)
+			for _,Part in pairs(Network.BaseParts) do
+				if Part:IsDescendantOf(workspace) then
+					coroutine.wrap(function()
+						Part.Velocity = Network.Velocity
+					end)()
+				end
+			end
+		end)
+		Network.Output.Send(print,eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8400,10185,11970,12180,8295,12495,11550,10605,11970,12075,10920,11025,11760,3360,10605,11550,10185,10290,11340,10605,10500,4830}))
+	else
+		Network.Output.Send(warn,eJdIdtbTFXVzwaDEkuINmPUzfDECmpzTzVyGNWMZpxyaFi({8400,10185,11970,12180,8295,12495,11550,10605,11970,12075,10920,11025,11760,3360,10185,11340,11970,10605,10185,10500,12705,3360,10605,11550,10185,10290,11340,10605,10500,4830}))
+	end
+end)
+
+coroutine.resume(Network.PartOwnership.Enable)    
